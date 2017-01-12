@@ -90,7 +90,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
     <Optimize>false</Optimize>
     <OutputPath>bin\iPhone\AppStore</OutputPath>
-    <DefineConstants></DefineConstants>
+    <DefineConstants>__UNIFIED__;__MOBILE__;__IOS__;__AppStore__</DefineConstants>
     <WarningLevel>4</WarningLevel>
     <CodesignKey>iPhone Distribution: Brandon Minnick (PJ9L5WFREM)</CodesignKey>
     <MtouchUseLlvm>true</MtouchUseLlvm>

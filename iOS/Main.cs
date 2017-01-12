@@ -9,6 +9,10 @@ namespace FaceOff.iOS
 		// This is the main entry point of the application.
 		static void Main(string[] args)
 		{
+			#if __AppStore__
+
+
+			#else
 			Insights.Initialize(InsightsConstants.InsightsApiKey);
 
 			Insights.HasPendingCrashReport += (sender, isStartupCrash) =>
@@ -18,6 +22,7 @@ namespace FaceOff.iOS
 					Insights.PurgePendingCrashReports().Wait();
 				}
 			};
+			#endif
 
 			UIApplication.Main(args, null, "AppDelegate");
 		}
